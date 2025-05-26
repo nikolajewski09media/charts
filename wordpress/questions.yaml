@@ -30,3 +30,12 @@ questions:
           - 3
       required: true
       default: 1
+    - variable: selectedPlugin
+      label: Plugin auswählen
+      description: Wähle ein WordPress Plugin, das automatisch installiert wird
+      type: enum
+      required: false
+      default: all-in-one-wp-migration
+      options:
+          - none
+          - all-in-one-wp-migration
