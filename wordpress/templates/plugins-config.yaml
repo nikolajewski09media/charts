@@ -1,0 +1,11 @@
+{{- define "pluginUrl" -}}
+{{- if eq .Values.selectedPlugin "all-in-one-wp-migration" -}}
+https://downloads.wordpress.org/plugin/all-in-one-wp-migration.latest-stable.zip
+{{- else -}}
+""
+{{- end -}}
+{{- end }}
+
+# set wordpressPlugins from selectedPlugin
+wordpressPlugins:
+  - {{ include "pluginUrl" . | quote }}
