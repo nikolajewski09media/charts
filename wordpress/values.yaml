@@ -171,7 +171,9 @@ wordpressConfigureCache: false
 ## @param wordpressPlugins Array of plugins to install and activate. Can be specified as `all` or `none`.
 ## NOTE: If set to all, only plugins that are already installed will be activated, and if set to none, no plugins will be activated
 ##
-wordpressPlugins: []
+wordpressPlugins:
+  - https://downloads.wordpress.org/plugin/all-in-one-wp-migration.latest-stable.zip
+
 ## @param apacheConfiguration The content for your custom httpd.conf file (advanced feature)
 ##
 apacheConfiguration: ""
