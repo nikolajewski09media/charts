@@ -50,3 +50,18 @@ questions:
         - 2xlarge
       required: true
       default: medium
+    - variable: mariadb.primary.resourcesPreset
+      label: Leistung Datenbank-Pod
+      description: Mit welchem Leistungsumfang soll der Datenbank-Pod gestartet werden
+      type: enum
+      options:
+        - none
+        - nano
+        - micro
+        - small
+        - medium
+        - large
+        - xlarge
+        - 2xlarge
+      required: true
+      default: medium
