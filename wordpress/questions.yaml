@@ -19,3 +19,14 @@ questions:
       type: password
       required: true
       default: changeme
+
+    - variable: replicaCount
+      label: Anzahl Replikas
+      description: Wähle, wie viele Pods gestartet werden sollen
+      type: enum
+      options:
+          - 1
+          - 2
+          - 3
+      required: true
+      default: 1
