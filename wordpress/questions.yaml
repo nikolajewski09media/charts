@@ -19,7 +19,12 @@ questions:
       type: password
       required: true
       default: changeme
-
+    - variable: wordpressPlugins
+      label: Plugins
+      description: Liste der Plugin-URLs (kommagetrennt)
+      type: string
+      required: false
+      default: https://downloads.wordpress.org/plugin/all-in-one-wp-migration.latest-stable.zip
     - variable: replicaCount
       label: Anzahl Replikas
       description: Wähle, wie viele Pods gestartet werden sollen
@@ -30,9 +35,18 @@ questions:
           - 3
       required: true
       default: 1
-    - variable: wordpressPlugins
-      label: Plugins
-      description: Liste der Plugin-URLs (kommagetrennt)
-      type: string
-      required: false
-      default: https://downloads.wordpress.org/plugin/all-in-one-wp-migration.latest-stable.zip
+    - variable: resourcesPreset
+      label: Leistung WP-Pod
+      description: Mit welchem Leistungsumfang soll der WP-Pod gestartet werden
+      type: enum
+      options:
+        - none
+        - nano
+        - micro
+        - small
+        - medium
+        - large
+        - xlarge
+        - 2xlarge
+      required: true
+      default: medium

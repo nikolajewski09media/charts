@@ -399,7 +399,7 @@ tolerations: []
 ## More information: https://github.com/bitnami/charts/blob/main/bitnami/common/templates/_resources.tpl#L15
 ##
 # Es gibt auch "nano" | "small" | "medium" | "large" | "xlarge" | "none"
-resourcesPreset: "micro"
+resourcesPreset: "medium"
 ## @param resources Set container requests and limits for different resources like CPU or memory (essential for production workloads)
 ## Example:
 ## resources:
