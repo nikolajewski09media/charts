@@ -1,6 +1,7 @@
-- name: hostname
-  type: string
-  label: "Hostname für die Anwendung"
-  description: "Geben Sie den gewünschten Hostnamen für die Anwendung ein."
-  required: true
-  default: "my-default-hostname"
+questions:
+  - variable: ingress.hostname
+    label: Hostname für die App
+    description: Trage hier den gewünschten Hostnamen ein
+    type: string
+    required: true
+    default: example.com
