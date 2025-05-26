@@ -14,7 +14,7 @@ entries:
       tanzuCategory: application
     apiVersion: v2
     appVersion: 6.8.1
-    created: "2025-05-26T10:31:01.728372+02:00"
+    created: "2025-05-26T10:41:17.717061+02:00"
     dependencies:
     - condition: memcached.enabled
       name: memcached
@@ -32,7 +32,7 @@ entries:
     description: WordPress is the world's most popular blogging and content management
       platform. Powerful yet simple, everyone from students to global corporations
       use it to build beautiful, functional websites.
-    digest: a89fcff0236a8969c2201a0b7fbf3fe9f1d6929d72f358676d94361fc61f3b62
+    digest: d0321ede647fb437d079b51301280d22d5e69bd9ea3b91520a558dc425bbff9b
     home: https://bitnami.com
     icon: https://dyltqmyl993wv.cloudfront.net/assets/stacks/wordpress/img/wordpress-stack-220x234.png
     keywords:
@@ -65,7 +65,7 @@ entries:
       tanzuCategory: application
     apiVersion: v2
     appVersion: 6.8.1
-    created: "2025-05-26T10:31:01.734738+02:00"
+    created: "2025-05-26T10:41:17.723298+02:00"
     dependencies:
     - condition: memcached.enabled
       name: memcached
@@ -103,4 +103,4 @@ entries:
     urls:
     - docs/wordpress-24.2.6.tgz
     version: 24.2.6
-generated: "2025-05-26T10:31:01.718779+02:00"
+generated: "2025-05-26T10:41:17.7085+02:00"
