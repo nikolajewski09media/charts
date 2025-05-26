@@ -1,19 +1,21 @@
 questions:
     - variable: ingress.hostname
-      label: Hostname für die App
-      description: Trage hier den gewünschten Hostnamen ein
+      label: Hostname
+      description: Der gewünschte Hostname für den Ingress
       type: string
       required: true
-      default: example.com
+      default: wordpress.example.com
+
     - variable: wordpressUsername
-      label: Wordpress Benutzername
-      description: Trage hier den gewünschten Benutzernamen ein
+      label: WordPress Admin Benutzername
+      description: Benutzername für den Admin-Account
       type: string
-      required: false
-      default: user
+      required: true
+      default: admin
+
     - variable: wordpressPassword
-      label: Wordpress Passwort
-      description: Falls nicht gesetzt, wird ein Zufallspasswort automatisch geneiert. (Zu finden in den Secrets)
-      type: string
-      required: false
-      default: ""
+      label: WordPress Admin Passwort
+      description: Passwort für den Admin-Account
+      type: password
+      required: true
+      default: changeme
