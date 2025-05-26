@@ -1,0 +1,6 @@
+- name: hostname
+  type: string
+  label: "Hostname für die Anwendung"
+  description: "Geben Sie den gewünschten Hostnamen für die Anwendung ein."
+  required: true
+  default: "my-default-hostname"
