@@ -284,3 +284,10 @@ wordpress: cache
        externalCache.port=CACHE_SERVER_PORT
 {{- end -}}
 {{- end -}}
+
+
+ingress:
+  extraHosts:
+{{- if .Values.ingress.extraHost }}
+    - name: {{ .Values.ingress.extraHost | quote }}
+{{- end }}

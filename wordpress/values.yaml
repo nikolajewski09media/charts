@@ -672,13 +672,13 @@ ingress:
     selfSigned: false
     ## @param ingress.extraHosts An array with additional hostname(s) to be covered with the ingress record. The host names are templated and thus can contain other variable references.
     ## e.g:
-    ## extraHosts:
-    ##   - name: wordpress.local
-    ##     path: /
+    # # extraHosts:
+    # #   - name: wordpress.local
+    # #     path: /
     ##
-    extraHosts: 
-        - name: www.
-          path: /
+    extraHosts:
+      - name: www.
+        path: /
     ## @param ingress.extraPaths An array with additional arbitrary paths that may need to be added to the ingress under the main host
     ## e.g:
     ## extraPaths:
