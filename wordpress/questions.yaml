@@ -4,7 +4,20 @@ questions:
       description: Der gewünschte Hostname für den Ingress
       type: string
       required: true
-      default: wordpress.example.com
+      default: example.com
+
+    - variable: wordpressUsername
+      label: WordPress Admin Benutzername
+      description: Benutzername für den Admin-Account
+      type: string
+      required: true
+      default: admin
+    - variable: secondaryIngress.hostname
+      label: Hostname www
+      description: Der gewünschte Hostname www für den Ingress
+      type: string
+      required: true
+      default: www.example.com
 
     - variable: wordpressUsername
       label: WordPress Admin Benutzername

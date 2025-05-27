@@ -638,7 +638,7 @@ ingress:
     ## @param ingress.hostname Default host for the ingress record. The hostname is templated and thus can contain other variable references.
     ##
     # wordpress.local IMMER in richtige Domain umbennenen!!!
-    hostname: wordpress.local
+    hostname: ""
     ## @param ingress.path Default path for the ingress record
     ## NOTE: You may need to set this to '/*' in order to use this with ALB ingress controllers
     ##
@@ -730,6 +730,8 @@ ingress:
     ##
     extraRules: []
 
+    port: 80
+
 ## Configure second ingress resource that allows you to access the WordPress installation
 ## This may be used to secure /wp-admin behind authentication or IP restrictions
 ## ref: https://kubernetes.io/docs/concepts/services-networking/ingress/
@@ -737,7 +739,7 @@ ingress:
 secondaryIngress:
     ## @param secondaryIngress.enabled Enable ingress record generation for WordPress
     ##
-    enabled: false
+    enabled: true
     ## @param secondaryIngress.pathType Ingress path type
     ##
     pathType: ImplementationSpecific
@@ -751,7 +753,7 @@ secondaryIngress:
     ingressClassName: ""
     ## @param secondaryIngress.hostname Default host for the ingress record. The hostname is templated and thus can contain other variable references.
     ##
-    hostname: wordpress.local
+    hostname: 
     ## @param secondaryIngress.path Default path for the ingress record
     ## NOTE: You may need to set this to '/*' in order to use this with ALB ingress controllers
     ##
@@ -842,6 +844,7 @@ secondaryIngress:
     ##             name: http
     ##
     extraRules: []
+    port: 80
 ## @section Persistence Parameters
 ##
 
