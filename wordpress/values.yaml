@@ -676,7 +676,9 @@ ingress:
     ##   - name: wordpress.local
     ##     path: /
     ##
-    extraHosts: []
+    extraHosts: 
+        - name: www.
+          path: /
     ## @param ingress.extraPaths An array with additional arbitrary paths that may need to be added to the ingress under the main host
     ## e.g:
     ## extraPaths:
@@ -730,7 +732,8 @@ ingress:
     ##
     extraRules: []
 
-    port: 80
+    port: 
+        number: 80
 
 ## Configure second ingress resource that allows you to access the WordPress installation
 ## This may be used to secure /wp-admin behind authentication or IP restrictions
@@ -739,7 +742,7 @@ ingress:
 secondaryIngress:
     ## @param secondaryIngress.enabled Enable ingress record generation for WordPress
     ##
-    enabled: true
+    enabled: false
     ## @param secondaryIngress.pathType Ingress path type
     ##
     pathType: ImplementationSpecific
@@ -844,7 +847,8 @@ secondaryIngress:
     ##             name: http
     ##
     extraRules: []
-    port: 80
+    port: 
+        number: 80
 ## @section Persistence Parameters
 ##
 
