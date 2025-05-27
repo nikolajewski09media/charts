@@ -6,12 +6,12 @@ questions:
       required: true
       default: example.com
 
-    - variable: ingress.extraHost
-      label: www. Hostname 
-      description: Domainname www.example.com
-      type: string
-      required: true
-      default: www.example.com
+    # - variable: ingress.extraHost
+    #   label: www. Hostname 
+    #   description: Domainname www.example.com
+    #   type: string
+    #   required: true
+    #   default: www.example.com
 
     - variable: wordpressUsername
       label: WordPress Admin Benutzername

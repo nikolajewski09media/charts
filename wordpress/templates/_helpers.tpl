@@ -286,9 +286,3 @@ wordpress: cache
 {{- end -}}
 
 
-ingress:
-  extraHosts:
-{{- if .Values.ingress.extraHost }}
-    - name: {{ .Values.ingress.extraHost | quote }}
-      path: /
-{{- end }}
