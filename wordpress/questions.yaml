@@ -6,7 +6,7 @@ questions:
       required: true
       default: example.com
 
-    - variable: ingress.extraHosts.name
+    - variable: ingress.extraHosts[0].name
       label: Hostname www
       description: Der gewünschte Hostname www für den Ingress
       type: string
