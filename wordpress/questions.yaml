@@ -6,12 +6,12 @@ questions:
       required: true
       default: example.com
 
-    # - variable: ingress.extraHost
-    #   label: www. Hostname 
-    #   description: Domainname www.example.com
-    #   type: string
-    #   required: true
-    #   default: www.example.com
+    - variable: wordpress.image.tag
+      label: Wordpress-Docker-Image 
+      description: Welche Wordpress-Version/PHP-Version
+      type: string
+      required: true
+      default: 6.8.1-debian-12-r1
 
     - variable: wordpressUsername
       label: WordPress Admin Benutzername

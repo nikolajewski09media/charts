@@ -36,6 +36,12 @@ global:
 ## @section Common parameters
 ##
 
+wordpress:
+  image:
+    repository: docker.io/bitnami/wordpress
+    tag: 6.8.1-debian-12-r1
+
+
 ## @param kubeVersion Override Kubernetes version
 ##
 kubeVersion: ""
