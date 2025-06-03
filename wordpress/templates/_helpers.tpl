@@ -295,11 +295,11 @@ wordpress: cache
 {{- end -}}
 {{- $chars := "abcdefghijklmnopqrstuvwxyz0123456789" -}}
 {{- $n := len $chars -}}
+{{- $bytes := randBytes $length -}}
 {{- $result := "" -}}
-{{- range $i := until $length -}}
-  {{- $randomIndex := randInt 0 $n -}}
-  {{- $randomChar := index $chars (int $randomIndex) -}}
-  {{- $result = printf "%s%s" $result $randomChar -}}
+{{- range $byte := $bytes -}}
+  {{- $index := mod (int $byte) $n -}}
+  {{- $result = printf "%s%s" $result (index $chars $index) -}}
 {{- end -}}
 {{- $result -}}
 {{- end -}}
