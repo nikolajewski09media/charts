@@ -293,13 +293,6 @@ wordpress: cache
 {{- else if not (kindIs "int" $length) -}}
   {{- $length = 8 -}} # Standardwert, falls es kein Float oder Int ist
 {{- end -}}
-{{- $chars := "abcdefghijklmnopqrstuvwxyz0123456789" -}}
-{{- $n := len $chars -}}
-{{- $bytes := randBytes $length -}}
-{{- $result := "" -}}
-{{- range $byte := $bytes -}}
-  {{- $index := mod (int $byte) $n -}}
-  {{- $result = printf "%s%s" $result (index $chars $index) -}}
-{{- end -}}
+{{- $result := randAlphaNum $length -}}
 {{- $result -}}
 {{- end -}}
