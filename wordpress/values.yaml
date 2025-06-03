@@ -160,7 +160,7 @@ wordpressSkipInstall: false
 ##   @ini_set( 'memory_limit', '256M' );
 ##
 wordpressExtraConfigContent: |
-    define('WPLANG', 'de_DE');
+    @ini_set('WPLANG', 'de_DE');
 ## @param wordpressConfiguration The content for your custom wp-config.php file (advanced feature)
 ## NOTE: This will override configuring WordPress based on environment variables (including those set by the chart)
 ## NOTE: Currently only supported when `wordpressSkipInstall=true`
