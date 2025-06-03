@@ -298,7 +298,7 @@ wordpress: cache
 {{- $result := "" -}}
 {{- range $i := until $length -}}
   {{- $randomIndex := randInt 0 $n -}}
-  {{- $randomChar := index $chars $randomIndex -}}
+  {{- $randomChar := index $chars (int $randomIndex) -}}
   {{- $result = printf "%s%s" $result $randomChar -}}
 {{- end -}}
 {{- $result -}}
