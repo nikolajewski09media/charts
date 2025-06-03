@@ -296,7 +296,7 @@ wordpress: cache
 {{- $chars := "abcdefghijklmnopqrstuvwxyz0123456789" -}}
 {{- $n := len $chars -}}
 {{- $base64Bytes := randBytes $length -}}
-{{- $decodedBytes := base64decode $base64Bytes -}}
+{{- $decodedBytes := b64dec $base64Bytes -}}
 {{- $result := "" -}}
 {{- range $byte := $decodedBytes -}}
   {{- $index := mod $byte $n -}}
