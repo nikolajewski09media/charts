@@ -145,6 +145,7 @@ wordpressBlogName: User's Blog!
 ## @param wordpressTablePrefix Prefix to use for WordPress database tables
 ##
 wordpressTablePrefix: ""
+wordpressRandomPrefixLength: 10 
 ## @param wordpressScheme Scheme to use to generate WordPress URLs
 ##
 wordpressScheme: http
