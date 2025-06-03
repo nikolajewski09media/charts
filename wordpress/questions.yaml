@@ -6,7 +6,7 @@ questions:
       required: true
       default: example.com
 
-    - variable: wordpress.image.tag
+    - variable: image.tag
       label: Wordpress-Docker-Image 
       description: Welche Wordpress-Version/PHP-Version
       type: string

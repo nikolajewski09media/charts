@@ -162,7 +162,7 @@ spec:
         {{- end }}
       containers:
         - name: wordpress
-          image: {{ .Values.wordpress.image.repository }}:{{ .Values.wordpress.image.tag }}
+          image: {{ include "wordpress.image" . }}
           imagePullPolicy: {{ .Values.image.pullPolicy | quote }}
           {{- if .Values.diagnosticMode.enabled }}
           command: {{- include "common.tplvalues.render" (dict "value" .Values.diagnosticMode.command "context" $) | nindent 12 }}
