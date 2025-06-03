@@ -295,9 +295,10 @@ wordpress: cache
 {{- end -}}
 {{- $chars := "abcdefghijklmnopqrstuvwxyz0123456789" -}}
 {{- $n := len $chars -}}
-{{- $bytes := randBytes $length -}}
+{{- $base64Bytes := randBytes $length -}}
+{{- $decodedBytes := base64Decode $base64Bytes -}}
 {{- $result := "" -}}
-{{- range $byte := $bytes -}}
+{{- range $byte := $decodedBytes -}}
   {{- $index := mod $byte $n -}}
   {{- $result = printf "%s%s" $result (index $chars $index) -}}
 {{- end -}}
