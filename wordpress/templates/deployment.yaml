@@ -233,7 +233,7 @@ spec:
             - name: WORDPRESS_BLOG_NAME
               value: {{ .Values.wordpressBlogName | quote }}
             - name: WORDPRESS_TABLE_PREFIX
-              value: value: {{ default (printf "%s_" (include "wordpress.randomPrefix" .Values.wordpressRandomPrefixLength)) .Values.wordpressTablePrefix | quote }}
+              value: {{ default (printf "%s_" (include "wordpress.randomPrefix" .Values.wordpressRandomPrefixLength)) .Values.wordpressTablePrefix | quote }}
             - name: WORDPRESS_SCHEME
               value: {{ .Values.wordpressScheme | quote }}
             - name: WORDPRESS_EXTRA_WP_CONFIG_CONTENT
