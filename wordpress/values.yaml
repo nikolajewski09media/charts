@@ -144,7 +144,7 @@ wordpressLastName: LastName
 wordpressBlogName: User's Blog!
 ## @param wordpressTablePrefix Prefix to use for WordPress database tables
 ##
-wordpressTablePrefix: wp_
+wordpressTablePrefix: ""
 ## @param wordpressScheme Scheme to use to generate WordPress URLs
 ##
 wordpressScheme: http
